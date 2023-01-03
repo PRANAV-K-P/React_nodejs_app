@@ -1,0 +1,36 @@
+.centerDiv {
+    border: 1px solid black;
+    width: max-content;
+    padding: 50px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    border-radius: 6px;
+  }
+  .centerDiv2{
+    border: 1px solid black;
+    width: max-content;
+    padding: 10px;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border-radius: 6px;
+  }
+  .uploadBtn {
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 3rem;
+    height: 48px;
+    border-color: transparent;
+    background-color: #46c3d1;
+    color: whitesmoke;
+    font-weight: 900;
+  }
+  .uploadBtn:hover {
+    background-color: rgb(228, 123, 24);
+    color: #002f34;
+    border: 2px solid #002f34;
+  }
+  
