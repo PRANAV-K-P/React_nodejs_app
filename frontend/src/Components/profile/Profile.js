@@ -25,8 +25,9 @@ const Profile = () => {
   const handleSubmit = async () => {
     const userId = JSON.parse(localStorage.getItem("user"))._id;
     const formData = new FormData();
-    formData.append("userId", userId);
-    formData.append("image", image);
+    
+      formData.append("userId", userId);
+      formData.append("image", image);
 
     let result = await fetch("http://localhost:4000/updateImage", {
       method: "Put",

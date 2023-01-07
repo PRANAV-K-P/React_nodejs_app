@@ -108,15 +108,18 @@ app.get("/search/:key",verifyToken, async (req, res) => {
 });
 app.put("/updateImage",verifyToken,upload.single('image'),async(req,res)=>{
   console.log(req.file,req.body);
-  const imageUrl=req.file.path
+  const imageUrl=req.file?.path
   if(!imageUrl){
     res.status(400).send({message:"Bad request"})
   }
   const result = await User.updateOne(
     { _id: req.body.userId },
     { $set: {imageUrl} }         
-  ); 
-  res.send({imageUrl})
+  );
+  if(imageUrl){
+    res.send({imageUrl})
+  }
+  
 })
 app.get("/single-User-Data/:id",verifyToken,async(req,res)=>{
   const userData = await User.find({ _id: req.params.id });
