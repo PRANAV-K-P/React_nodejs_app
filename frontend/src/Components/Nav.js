@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { updateUsername } from "../redux/user";
 const Nav = () => {
-  const auth = localStorage.getItem("user");
+  let auth = localStorage.getItem("user");
   const navigate = useNavigate();
   const { username } = useSelector((state) => state.user);
   const dispatch = useDispatch();
@@ -36,6 +36,10 @@ const Nav = () => {
       }
     })();
   }, [auth]);
+
+  console.log(auth,"----auth")
+  auth = JSON.parse(auth)
+  console.log(auth.name,"----auth-name")
 
   return (
     <div>

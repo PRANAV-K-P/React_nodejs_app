@@ -124,9 +124,9 @@ app.put("/updateImage",verifyToken,upload.single('image'),async(req,res)=>{
 app.get("/single-User-Data/:id",verifyToken,async(req,res)=>{
   const userData = await User.find({ _id: req.params.id });
   if (userData) {
-    res.send(userData);
+    res.status(200).send(userData);
   } else {
-    res.send({ result: "No user Found" });
+    res.status(400).send({ result: "No user Found" });
   }
 })
 
