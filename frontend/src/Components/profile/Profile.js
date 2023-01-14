@@ -8,7 +8,7 @@ const Profile = () => {
   const getUser = async () => {
     const userId = JSON.parse(localStorage.getItem("user"))._id;
     let result = await fetch(
-      `http://localhost:4000/single-User-Data/${userId}`,
+      `http://localhost:4000/user/${userId}`,
       {
         headers: {
           authorization: `tree ${JSON.parse(localStorage.getItem("token"))}`,
@@ -29,7 +29,7 @@ const Profile = () => {
     formData.append("userId", userId);
     formData.append("image", image);
 
-    let result = await fetch("http://localhost:4000/updateImage", {
+    let result = await fetch("http://localhost:4000/image", {
       method: "Put",
       body: formData,
       headers: {

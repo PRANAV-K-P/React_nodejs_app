@@ -9,7 +9,7 @@ const ListUsers = () => {
   }, []);
 
   const getUsers = async () => {
-    let result = await fetch('http://localhost:4000/users');
+    let result = await fetch('http://localhost:4000/admin/users');
     result = await result.json();
     if(result){
         setUsers(result);
@@ -19,7 +19,7 @@ const ListUsers = () => {
   const searchHandle=async(event)=>{
     let key=event.target.value
     if(key){
-      let result =await fetch(`http://localhost:4000/searchUsers/${key}`)
+      let result =await fetch(`http://localhost:4000/admin/search/${key}`)
       result=await result.json()
       if(result){
         setUsers(result)

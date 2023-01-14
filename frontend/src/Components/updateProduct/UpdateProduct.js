@@ -15,7 +15,7 @@ const UpdateProduct = () => {
   }, []);
 
   const getProductDetails = async () => {
-    let result = await fetch(`http://localhost:4000/productUpdatePage/${params.id}`,{
+    let result = await fetch(`http://localhost:4000/product/${params.id}`,{
         headers:{
             authorization:`tree ${JSON.parse(localStorage.getItem('token'))}`
           }
@@ -28,7 +28,7 @@ const UpdateProduct = () => {
   };
 
   const updateProduct = async () => {
-    let result = await fetch(`http://localhost:4000/updateProduct/${params.id}`,{
+    let result = await fetch(`http://localhost:4000/product/${params.id}`,{
         method: "Put",
         body: JSON.stringify({ name, price, category, company }),
         headers: {

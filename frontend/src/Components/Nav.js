@@ -18,7 +18,7 @@ const Nav = () => {
       try {
         const userId = JSON.parse(localStorage.getItem("user"))._id;
         let result = await fetch(
-          `http://localhost:4000/single-User-Data/${userId}`,
+          `http://localhost:4000/user/${userId}`,
           {
             headers: {
               authorization: `tree ${JSON.parse(
@@ -29,7 +29,7 @@ const Nav = () => {
         );
         result = await result.json();
         if (result) {
-          dispatch(updateUsername(result[0].name));
+          dispatch(updateUsername(result[0]?.name));
         }
       } catch (e) {
         console.log(e);
@@ -39,7 +39,7 @@ const Nav = () => {
 
   console.log(auth,"----auth")
   auth = JSON.parse(auth)
-  console.log(auth.name,"----auth-name")
+  console.log(auth?.name,"----auth-name")
 
   return (
     <div>
