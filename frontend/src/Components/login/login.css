@@ -4,3 +4,16 @@
     display: block;
     margin-left: 20px;
 }
+.login{
+    margin-left: 40%;
+    margin-top:150px;
+    border: 1px;
+    border-color: black;
+  }
+  .login-heading{
+    margin-left: 134px;
+  }
+  .loginbox{
+    width: 23.5rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  }

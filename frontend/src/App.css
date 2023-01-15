@@ -14,7 +14,7 @@
   justify-content: space-evenly;
   padding: 10px;
   margin: 0;
-  background-color: rgb(133, 184, 128);
+  background-color: #65CCB8;
 }
 .nav-ul li{
   display: inline-block;
@@ -39,16 +39,10 @@
 .footer{
   position: absolute;
   bottom: 0;
-  background-color: rgb(133, 184, 128);
+  background-color: black;
   width: 100%;
   text-align: center;
-}
-.login{
-  margin-left: 40%;
-  margin-top:150px;
-}
-.login-heading{
-  margin-left: 134px;
+  color: white;
 }
 .btn-login{
   cursor: pointer;

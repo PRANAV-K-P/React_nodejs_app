@@ -37,6 +37,7 @@ const Login = () => {
   };
   return (
     <div className="login">
+      <div className="loginbox">
       <h1 className="login-heading">Login</h1>
       <input
         className="inputBox"
@@ -57,6 +58,7 @@ const Login = () => {
       <button className="btn-login" type="button" onClick={handleLogin}>
         Login
       </button>
+      </div>
     </div>
   );
 };
